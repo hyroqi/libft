@@ -1,7 +1,8 @@
-SRCS 	= srcs/ft_isalnum.c
-OBJS 	= *.o
+SRCS 	= ft_strlen.c
+OBJS 	= ${SRCS:.c=.o}
 LIB		= libft.a
 CC		= gcc
+CFLAGS	= -Wall -Wextra -Werror
 
 all: ${LIB}
 
@@ -9,7 +10,7 @@ ${LIB}: ${OBJS}
 	ar rcs ${LIB} ${OBJS}
 
 .c.o:
-	${CC} ${CFLAGS} -I includes -c $<
+	${CC} ${CFLAGS} -I. libft.h -c $<
 
 clean:
 	rm -f ${OBJS}

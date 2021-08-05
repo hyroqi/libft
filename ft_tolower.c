@@ -1,9 +1,12 @@
 #include "libft.h"
 
-char	ft_tolower(char c)
+char	ft_tolower(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + ' ');
+	char	a;
+
+	a = c;
+	if (a >= 'A' && a <= 'Z')
+		return (a + ' ');
 	else
-		return (c);
+		return (a);
 }

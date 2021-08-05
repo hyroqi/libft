@@ -1,8 +1,11 @@
 #include "libft.h"
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
-	if (c >= ' ' && c <= '~')
+	char	a;
+
+	a = c;
+	if (a >= ' ' && a <= '~')
 		return (1);
 	else
 		return (0);
