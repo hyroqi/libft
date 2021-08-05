@@ -3,10 +3,10 @@ OBJS 	= *.o
 LIB		= libft.a
 CC		= gcc
 
+all: ${LIB}
+
 ${LIB}: ${OBJS}
 	ar rcs ${LIB} ${OBJS}
-
-all: ${LIB}
 
 .c.o:
 	${CC} ${CFLAGS} -I includes -c $<
