@@ -1,12 +1,13 @@
 SRCS 	= ft_strlen.c
 OBJS 	= ${SRCS:.c=.o}
+NAME	= ${LIB}
 LIB		= libft.a
 CC		= gcc
 CFLAGS	= -Wall -Wextra -Werror
 
-all: ${LIB}
+all: ${NAME}
 
-${LIB}: ${OBJS}
+${NAME}: ${OBJS}
 	ar rcs ${LIB} ${OBJS}
 
 .c.o:
