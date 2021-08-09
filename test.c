@@ -3,47 +3,38 @@
 #include "libft.h"
 #include <stdlib.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_memcmp (const void*s1, const void *s2, size_t n)
 {
-	size_t			i;
-	unsigned char	*ds;
-	unsigned char	*sr;
+	int	i;
+	unsigned char *str1;
+	unsigned char *str2;
 
 	i = 0;
-	ds = (unsigned char*)dest;
-	sr = (unsigned char*)src;
-	while (i < n)
-	{
-		ds[i] = sr[i];
+	str1 = ((unsigned char*)s1);
+	str2 = ((unsigned char*)s2);
+	while (str1[i] == str2[i] && i < n && str1[i] != '\0')
 		i++;
-	}
-	return(dest);
-}
-
-void	*ft_memmove(void *dest, const void *src, size_t n)
-{
-	unsigned char *ds;
-	unsigned char *sc;
-
-	ds = ((unsigned char *)dest);
-	sc = ((unsigned char *)src);
-	if (sc < ds)
-		while (n--)
-			ds[n] = sc[n];
+	if (str1[i] == str2[i])
+		return (0);
 	else
-		ft_memcpy(ds, sc, n);
-	return (dest);
+		return (str1[i] - str2[i]);
 }
 
 int	main(void)
 {
 	char a[69] = "Fuckpat";
-	char b[69] = "bbong";
+	char b[69] = "Fuckpbt";
+	int c;
+	int d;
 
+	printf("Function XX  : %d\n", ft_memcmp(a, b, 7));
+	printf("Function ZZ  : %d\n", memcmp(a, b, 7));
 
-	printf("Function XX  : %s\n", a);
-	ft_memmove(a + 4, b, 5 * sizeof(char));
-	printf("Function ZZ  : %s\n", a);
+	c = memcmp(a, b, 7);
+	d = ft_memcmp(a, b, 7);
+
+	printf("Main Function after %d\n", c);
+	printf("My Function after %d\n", d);
 
 	return (0);
 
