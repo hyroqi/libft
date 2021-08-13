@@ -1,0 +1,15 @@
+#include "libft.h"
+
+void	ft_strteri(char *s, void (*f)(unsigned int, char*))
+{
+	int		i;
+
+	i = 0;
+	if (!f || !s)
+		return (0);
+	while (s[i] != '\0')
+	{
+		f(i, s[i]);
+		i++;
+	}	
+}

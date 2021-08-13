@@ -1,59 +1,35 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 #include "libft.h"
 #include <stdlib.h>
 
-int	ft_strlen(const char *c)
+static int	ft_intlen(int n)
 {
-	int	i;
+	int	len;
 
-	i = 0;
-	while (c[i] != '\0')
+	len = 0;
+	if (n < 0)
+		len++;
+	if (n == 0)
+		len = 1;
+	while (n)
 	{
-		i++;
+		n /= 10;
+		len++;
 	}
-	return (i);
-}
-
-char	*ft_strjoin(char const *s1, char const *s2)
-{
-	int		i;
-	int		j;
-	char	*finalstr;
-
-	i = 0;
-	j = 0;
-	finalstr = (char*)malloc((ft_strlen(s1) + ft_strlen(s2) * sizeof(char)));
-	printf("%d\n",(ft_strlen(s1) + ft_strlen(s2)));
-	if (!finalstr)
-		return (0);
-	while (s1[i] != '\0')
-	{
-		finalstr[i] = s1[j];
-		i++;
-		j++;
-	}
-	printf("1 done\n");
-	j = 0;
-	while (s2[j] != '\0')
-	{
-		finalstr[i] = s2[j];
-		i++;
-		j++;
-	}
-	printf("2done\n");
-	return (finalstr);
+	return (len);
 }
 
 int	main(void)
 {
-	char a[69] = "Fuckpat";
-	char b[69] = "Fuckzec";
-	int c;
-	int d;
+	char a[69] = "pat Fuck pat";
+	char b[69] = "pat";
+	int	c = 6999;
+	c++;
 
-	printf("Function XX  : %s\n", ft_strjoin(a, b));
+	printf("Function XX  : %d\n", c);
 
 	return (0);
 
 }
+*/
