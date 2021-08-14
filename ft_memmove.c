@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -6,6 +6,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char	*ds;
 	unsigned char	*sc;
 
+	i = 0;
 	ds = ((unsigned char *)dest);
 	sc = ((unsigned char *)src);
 	if (sc < ds)

@@ -8,6 +8,7 @@ static int	ft_wordcount(char *s, char c)
 
 	i = 0;
 	isword = 0;
+	wordcount = 0;
 	while (s[i] != '\0')
 	{
 		if (isword == 0 && s[i] != c)
@@ -28,6 +29,7 @@ static int	ft_wordstrlen(char *s, char c)
 	int	i;
 
 	len = 0;
+	i = 0;
 	while (s[i] != c && s[i] != '\0')
 	{
 		len++;
@@ -66,13 +68,13 @@ char	**ft_split(char const*s, char c)
 		{
 			while (s[i] == c && s[i] != '\0')
 				i++;
-			res[j] = ft_substr((char *)s, 0, ft_wordcount((char *)s, c));
+			res[j] = ft_substr((char *)s, 0, ft_wordstrlen((char *)s, c));
 			if (!res[j])
 				return (ft_free(res, j));
 			s = s + ft_wordcount((char *)s, c);
 			j++;
 		}
-		res[i] = '\0';
-		return (res);
 	}
+	res[j] = '\0';
+	return (res);
 }
