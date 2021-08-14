@@ -47,28 +47,6 @@ static void	*ft_free(char **res, int n)
 	return (0);
 }
 
-static char	*ft_substr(char const *s, unsigned int start, int len)
-{
-	char	*dest;
-	int		i;
-
-	if (!s)
-		return (0);
-	if (start >= ft_strlen(s))
-		len = 0;
-	dest = (char*)malloc((1 + len) *sizeof(char));
-	if (!dest)
-		return (0);
-	i = 0;
-	while (i < len && s[i + start] != '\0')
-	{
-		dest[i] = s[i + start];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
 char	**ft_split(char const*s, char c)
 {
 	int		wordcount;
