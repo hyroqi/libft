@@ -75,6 +75,6 @@ char	**ft_split(char const*s, char c)
 			j++;
 		}
 	}
-	res[j] = '\0';
+	res[j] = NULL;
 	return (res);
 }
