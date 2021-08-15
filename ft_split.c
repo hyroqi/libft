@@ -17,7 +17,7 @@ static int	ft_wordcount(char *s, char c)
 			wordcount++;
 		}
 		else if (isword == 0 && s[i] == c)
-			isword  = 0;
+			isword = 0;
 		i++;
 	}
 	return (wordcount);
@@ -61,19 +61,16 @@ char	**ft_split(char const*s, char c)
 	if (!s)
 		return (0);
 	wordcount = ft_wordcount((char *)s, c);
-	res = (char**)malloc((wordcount + 1) * sizeof(char*));
-	if(res)
+	res = (char **)malloc((wordcount + 1) * sizeof(char *));
+	while (wordcount--)
 	{
-		while (wordcount--)
-		{
-			while (s[i] == c && s[i] != '\0')
-				i++;
-			res[j] = ft_substr((char *)s, 0, ft_wordstrlen((char *)s, c));
-			if (!res[j])
-				return (ft_free(res, j));
-			s = s + ft_wordcount((char *)s, c);
-			j++;
-		}
+		while (s[i] == c && s[i] != '\0')
+			i++;
+		res[j] = ft_substr((char *)s, 0, ft_wordstrlen((char *)s, c));
+		if (!res[j])
+			return (ft_free(res, j));
+		s = s + ft_wordcount((char *)s, c);
+		j++;
 	}
 	res[j] = NULL;
 	return (res);
