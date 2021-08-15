@@ -14,5 +14,5 @@ int	strncmp(const char *str1, const char *str2, size_t n)
 	if (s1[i] == s2[i])
 		return (0);
 	else
-		return (s1[i] - s2[i]);
+		return ((int)s1[i] - (int)s2[i]);
 }
