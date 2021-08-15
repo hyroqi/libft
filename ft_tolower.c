@@ -2,11 +2,8 @@
 
 char	ft_tolower(int c)
 {
-	char	a;
-
-	a = c;
-	if (a >= 'A' && a <= 'Z')
-		return (a + ' ');
+	if (c >= 'A' && c <= 'Z')
+		return (c + ' ');
 	else
-		return (a);
+		return (c);
 }

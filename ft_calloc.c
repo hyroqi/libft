@@ -4,9 +4,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	ptr = malloc(nmemb * size);
+	ptr = (void *)malloc(nmemb * size);
 	if (!ptr)
-		return (0);
+		return (NULL);
 	ft_bzero(ptr, nmemb);
 	return (ptr);
 }

@@ -13,12 +13,15 @@ int	ft_atoi(const char *nptr)
 	{
 		i++;
 	}
-	if (nptr[i] == '-')
-		sign = -1;
-	i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
+	{
+		if (nptr[i] == '-')
+			sign = -1;
+		i++;
+	}
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		result *= 10 + nptr[i] - '0';
+		result = result * 10 + nptr[i] - '0';
 		i++;
 	}
 	return (sign * result);

@@ -2,11 +2,8 @@
 
 char	ft_toupper(int c)
 {
-	char	a;
-
-	a = c;
-	if (a >= 'a' && a <= 'z')
-		return (a - ' ');
+	if (c >= 'a' && c <= 'z')
+		return (c - ' ');
 	else
-		return (a);
+		return (c);
 }
