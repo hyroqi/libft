@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	while (s2 != '\0')
 	{
-		finalstr[i] = s1[j];
+		finalstr[i] = s2[j];
 		i++;
 		j++;
 	}
