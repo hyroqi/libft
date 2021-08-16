@@ -8,15 +8,14 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	if (!dest || !src || !n)
 		return (NULL);
-	i = 0;
 	ds = ((unsigned char *)dest);
 	sc = ((unsigned char *)src);
 	if (sc < ds)
 	{
-		while (i < n)
+		while (n)
 		{
-			ds[i] = sc[i];
-			i++;
+			ds[n] = sc[n];
+			n--;
 		}
 	}
 	else
