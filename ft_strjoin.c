@@ -16,7 +16,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 			while (*s1 != '\0')
 				*buffer++ = *s1++;
 			while (*s2 != '\0')
-				*buffer = *s2++;
+				*buffer++ = *s2++;
 			*buffer = '\0';
 			return (finalstr);
 		}
