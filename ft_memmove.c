@@ -15,7 +15,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		while (n--)
 		{
-			ds[--n] = sc[--n];	
+			ds[n - 1] = sc[n - 1];
 		}
 	}
 	else
