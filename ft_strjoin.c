@@ -9,7 +9,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	combstrlen = (ft_strlen(s1) + ft_strlen(s2));
 	if (s1 && s2)
 	{
-		buffer = (char *)malloc(combstrlen * sizeof(char));
+		buffer = (char *)malloc((combstrlen + 1) * sizeof(char));
 		if (buffer)
 		{
 			finalstr = buffer;
@@ -17,6 +17,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 				*buffer++ = *s1++;
 			while (*s2 != '\0')
 				*buffer = *s2++;
+			*buffer = '\0';
 			return (finalstr);
 		}
 		return (NULL);
