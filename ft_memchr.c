@@ -12,7 +12,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	sr = ((unsigned char *)str);
 	while (i < n)
 	{
-		if (sr[i] == c)
+		if (sr[i] == cast)
 			return ((unsigned char *)&sr[i]);
 		i++;
 	}
