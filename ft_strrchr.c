@@ -6,7 +6,7 @@ char	*ft_strrchr(const char *s, int c)
 	unsigned char	x;
 
 	x = (unsigned char)c;
-	i = (ft_strlen(s) - 1);
+	i = ft_strlen(s);
 	while (i >= 0)
 	{
 		if (s[i] == x)
