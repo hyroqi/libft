@@ -2,8 +2,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-	unsigned char x;
+	int				i;
+	unsigned char	x;
 
 	i = 0;
 	x = (unsigned char)c;
