@@ -6,7 +6,6 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	unsigned char	*sr;
 	unsigned char	cast;
 
-
 	i = 0;
 	cast = (unsigned char)c;
 	sr = ((unsigned char *)str);
