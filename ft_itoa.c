@@ -27,7 +27,7 @@ char	*ft_itoa(int n)
 	if (!itoa)
 		return (0);
 	if (n == 0)
-		return ('0');
+		return ("0");
 	if (n < 0)
 	{
 		itoa[0] = '-';
