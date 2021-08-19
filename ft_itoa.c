@@ -34,7 +34,7 @@ char	*ft_itoa(int n)
 	while (n != 0 && len >= 0)
 	{
 		itoa[len-- - 1] = abs(n % 10) + '0';
-		n = n / 10;
+		n /= 10;
 	}
 	return (itoa);
 }
