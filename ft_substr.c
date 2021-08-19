@@ -8,15 +8,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (0);
-	if (ft_strlen(s) < start)
+	if ((size_t)ft_strlen(s) < start)
 		return (ft_strdup(""));
-	if (ft_strlen(s) < len)
+	if ((size_t)ft_strlen(s) < len)
 		substr = (char *)malloc((ft_strlen(s) - start + 1) * sizeof(char));
 	else
 		substr = (char *)malloc((len + 1) * sizeof(char));
 	if (!substr)
 		return (0);
-	while (i < len)
+	while (i < len && s[start + i] != '\0')
 	{
 		substr[i] = s[start + i];
 		i++;
