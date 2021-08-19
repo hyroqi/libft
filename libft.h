@@ -1,7 +1,10 @@
 #ifndef LIBFT_H
 #define LIBFT_H
-#include <stdlib.h>
-#include <unistd.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <ctype.h>
+# include <stdlib.h>
+# include <string.h>
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
