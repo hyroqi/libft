@@ -26,8 +26,11 @@ char	*ft_itoa(int n)
 	itoa = (char *)malloc(len * sizeof(char));
 	if (!itoa)
 		return (0);
-	if (n == 0)
-		return ("0");
+	if (n == 0 && len == 1)
+	{
+		itoa[0] = '0';
+		return (itoa);
+	}
 	if (n < 0)
 	{
 		itoa[0] = '-';
