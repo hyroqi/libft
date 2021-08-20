@@ -27,7 +27,7 @@ char	*ft_itoa(int n)
 	if (n == 0 && len == 1)
 		itoa[0] = '0';
 	if (n == -2147483648)
-		itoa = "-2147483648";
+		itoa = ft_strdup("-2147483648");
 	else
 	{
 		if (n < 0)
