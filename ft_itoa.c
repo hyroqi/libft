@@ -24,9 +24,9 @@ char	*ft_itoa(int n)
 
 	len = ft_intlen(n);
 	if (n == -2147483648)
-		return(ft_strdup("-2147483648"));
+		return (ft_strdup("-2147483648"));
 	if (n == 0 && len == 1)
-		return(strdup("0"));
+		return (strdup("0"));
 	itoa = (char *)malloc((len + 1) * sizeof(char));
 	if (n < 0)
 	{
