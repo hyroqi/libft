@@ -23,11 +23,11 @@ char	*ft_itoa(int n)
 	int		len;
 
 	len = ft_intlen(n);
+	if (n == -2147483648)
+		return(ft_strdup("-2147483648"));
 	itoa = (char *)malloc((len + 1) * sizeof(char));
 	if (n == 0 && len == 1)
 		itoa[0] = '0';
-	if (n == -2147483648)
-		itoa = ft_strdup("-2147483648");
 	else
 	{
 		if (n < 0)
