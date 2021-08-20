@@ -25,22 +25,19 @@ char	*ft_itoa(int n)
 	len = ft_intlen(n);
 	if (n == -2147483648)
 		return(ft_strdup("-2147483648"));
-	itoa = (char *)malloc((len + 1) * sizeof(char));
 	if (n == 0 && len == 1)
-		itoa[0] = '0';
-	else
+		return(strdup("0"));
+	itoa = (char *)malloc((len + 1) * sizeof(char));
+	if (n < 0)
 	{
-		if (n < 0)
-		{
-			itoa[0] = '-';
-			n = -n;
-		}
-		itoa[len] = '\0';
-		while (n != 0 && len >= 0)
-		{
-			itoa[len-- - 1] = (n % 10) + '0';
-			n /= 10;
-		}
+		itoa[0] = '-';
+		n = -n;
+	}
+	itoa[len] = '\0';
+	while (n != 0 && len >= 0)
+	{
+		itoa[len-- - 1] = (n % 10) + '0';
+		n /= 10;
 	}
 	return (itoa);
 }
