@@ -33,8 +33,12 @@ SRCS 		= ./ft_atoi.c		\
 			  ./ft_tolower.c	\
 			  ./ft_toupper.c	\
 
-
 OBJS 		= ${SRCS:.c=.o}
+
+BONUS 		=
+
+BONUS_OBJS	= ${BONUS:.c=.o}
+
 NAME		= ${LIB}
 LIB			= libft.a
 CC			= gcc
@@ -56,4 +60,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+bonus: ${OBJS} ${BONUS_OBJS}
+	ar rcs ${NAME} ${OBJS} ${BONUS_OBJS}
+
+.PHONY: all clean fclean re bonus
