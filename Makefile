@@ -61,7 +61,7 @@ ${NAME}: ${OBJS}
 	${CC} ${CFLAGS} -I. libft.h -c $<
 
 clean:
-	rm -f ${OBJS}
+	rm -f ${OBJS} ${BONUS_OBJS}
 
 fclean: clean
 	rm -f ${LIB}
