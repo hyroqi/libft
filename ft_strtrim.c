@@ -24,6 +24,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	res = (char *)malloc((end - start + 1) * sizeof(char *));
 	if (!res)
 		return (NULL);
-	ft_strlcpy(res, *s1 + start, end - start + 1);
+	ft_strlcpy(res, s1 + start, end - start + 1);
 	return (res);
 }
