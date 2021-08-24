@@ -28,6 +28,8 @@ char	*ft_itoa(int n)
 	if (n == 0 && len == 1)
 		return (ft_strdup("0"));
 	itoa = (char *)malloc((len + 1) * sizeof(char));
+	if (!itoa)
+		return (NULL);
 	if (n < 0)
 	{
 		itoa[0] = '-';
