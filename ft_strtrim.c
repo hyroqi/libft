@@ -15,14 +15,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[start] != '\0' && ft_strchr(set, s1[start]))
 		start++;
 	while (s1[end] != '\0' && ft_strrchr(set, s1[end]))
-	{
-		if ((end - 1) < 1)
-			break ;
 		end--;
-	}
 	if (start > end)
 		return (ft_strdup(""));
-	res = (char *)malloc((end - start + 1) * sizeof(char *));
-	ft_strlcpy(res, s1 + start, end - start + 1);
+	res = (char *)malloc((end - start + 1) * sizeof(*s1));
+	if (!res)
+		return (NULL);
+	ft_strlcpy(res, s1 + start, end - start + 2);
 	return (res);
 }
