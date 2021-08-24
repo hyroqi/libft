@@ -22,7 +22,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	if (start > end)
 		return (ft_strdup(""));
-	res = (char *)malloc((end - start + 2) * sizeof(char *));
+	res = (char *)malloc((end - start + 1) * sizeof(char *));
 	ft_strlcpy(res, s1 + start, end - start + 2);
 	return (res);
 }
